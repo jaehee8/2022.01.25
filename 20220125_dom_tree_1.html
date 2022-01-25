@@ -10,7 +10,7 @@
   <div id="container"> container
     <div>h1parent
       <h1 id="target">hello</h1>
-      <p>djgaoeihaldikjfa;orih</p>
+      <p>Donec placerat rutrum est, at semper augue euismod id. Sed ut diam at neque fermentum elementum eget vel tortor. Quisque vel commodo est, dictum interdum nulla.</p>
     </div>
   </div>
 
@@ -18,6 +18,12 @@
     const h1 = document.querySelector('#target')
     console.log(h1);
     console.dir(h1);
+    console.log(h1.nextElementSibling);
+    h1.nextElementSibling.style.color = 'red';
+    h1.parentElement.style.backgroundColor = 'salmon';
+    h1.parentElement.style.width = '50vw';
+    h1.parentElement.style.height = '50vh';
+    
   </script>
 </body>
 </html>
