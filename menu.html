@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      /* width: 100vw;
+      height: 100vh; */
+      /* background-color: lightcoral; */
+      /* position: relative; */
+    }
+    #menu {
+      
+      /* border: 1px solid #fff; */
+      /* position: absolute; */
+      /* top: 0; */
+      /* right: 10vw; */
+    }
+    #plus_list {
+      /* opacity: 0; */
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="menu">
+      <button id="plus_btn">click</button>
+      <div id="plus_list">
+        
+        <div>list1</div>
+        <div>list2</div>
+        <div>list3</div>
+        <div>list4</div>
+        
+      </div>
+    </div>
+    <script>
+      const menu = document.querySelector('#menu')
+      const plusBtn = document.querySelector('#plus_btn');
+      const list = document.querySelector('#plus_list');
+      
+      console.dir(menu);
+      console.dir(plusBtn);
+      console.dir(list);
+      menu.parentElement.style.position = 'relative';
+      menu.parentElement.style.width = '100vw';
+      menu.parentElement.style.height = '100vh';
+      menu.parentElement.style.backgroundColor = 'lightcoral';
+      menu.style.position = 'absolute';
+      menu.style.top = '0';
+      menu.style.right = '10vw';
+
+      plusBtn.style.width = '2rem';
+      plusBtn.style.height = '2rem';
+      plusBtn.style.border = 'none';
+      plusBtn.style.backgroundColor = '#fff';
+      plusBtn.style.borderRadius = '0 0 50% 50%';
+      console.log(plusBtn.style.width);
+
+      for( i=0; i< list.children.length; i++) {
+        list.children[i].style.listStyle ='none';
+      }
+      let value = '0';
+      list.style.opacity = value;
+      plusBtn.addEventListener('click',function() {
+        if(value === '0'){
+          value = '1';
+          list.style.opacity = value;
+        } else {
+          value = '0';
+          list.style.opacity = value;
+        }
+      });
+    </script>
+    
+  </div>
+</body>
+</html>
