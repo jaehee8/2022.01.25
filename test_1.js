@@ -10,4 +10,5 @@ function animateHandleOne(startValue, endValue, animateValue) {
     }
   }, 16);
 }
-animateHandleOne(0, 100, 1);
+// animateHandleOne(0, 100, 1);
+animateHandleOne(0, 10, 1);
