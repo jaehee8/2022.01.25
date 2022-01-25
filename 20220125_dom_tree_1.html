@@ -15,6 +15,8 @@
   </div>
 
   <script>
+
+    //식별자의 관계를 사용하고 있다.
     const h1 = document.querySelector('#target')
     console.log(h1);
     console.dir(h1);  //구조 속에서 형제를 찾았다. ★★★★★★★★
@@ -23,12 +25,27 @@
     h1.parentElement.style.backgroundColor = 'salmon';
     h1.parentElement.style.width = '50vw';
     h1.parentElement.style.height = '50vh';
+    h1.nextElementSibling.setAttribute('id', "textbox");
+    //body dir로 찾기 h1의 부모의 부모의 부모
+    console.dir(h1.parentElement.parentElement.parentElement);
+    h1.parentElement.parentElement.parentElement.style.backgroundColor = '#ddd';
 
-    h1.addEventListener('click', function() {
-      h1.parentElement.style.backgroundColor = 'beige';
-      if(h1.parentElement.style.backgroundColor = 'beige') {
-        console.log('hello');
-      }
+    // h1.addEventListener('click', function() {
+    //   h1.parentElement.style.backgroundColor = 'beige';
+    //   if(h1.parentElement.style.backgroundColor = 'beige') {
+    //     console.log('hello');
+    //   }
+    // });
+
+    h1.addEventListener( 'click', function() {
+      h1.style.fontSize = '10rem';
+      h1.nextElementSibling.style.fontSize = '2rem';
+      h1.nextElementSibling.textContent = 'hello';
+      
+
+      setInterval(function(){
+        console.log('bye');
+      },1000);
     });
   </script>
 </body>
