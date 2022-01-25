@@ -22,6 +22,8 @@
       /* position: absolute; */
       /* top: 0; */
       /* right: 10vw; */
+      
+
     }
     #plus_list {
       /* opacity: 0; */
@@ -50,20 +52,35 @@
       console.dir(menu);
       console.dir(plusBtn);
       console.dir(list);
+      // container 스타일
       menu.parentElement.style.position = 'relative';
       menu.parentElement.style.width = '100vw';
       menu.parentElement.style.height = '100vh';
       menu.parentElement.style.backgroundColor = 'lightcoral';
+      menu.parentElement.style.overflow = 'hidden';
+      // menu 스타일
       menu.style.position = 'absolute';
       menu.style.top = '0';
-      menu.style.right = '10vw';
-
+      menu.style.right = '0';
+      menu.style.width = '20vw';
+      // menu.style.display = 'flex';
+      // menu.style.flexDirection ='column';
+      // menu.style.textAlign ='center';
+      // menu.style.alignItems = 'center';
+      //버튼 스타일
       plusBtn.style.width = '2rem';
       plusBtn.style.height = '2rem';
       plusBtn.style.border = 'none';
       plusBtn.style.backgroundColor = '#fff';
       plusBtn.style.borderRadius = '0 0 50% 50%';
       console.log(plusBtn.style.width);
+      // plus list 스타일
+      list.style.backgroundColor ='#fff';
+      list.style.width = '13vw'
+      list.style.marginLeft = '8vw'
+      list.style.boxShadow = '3px 3px 5px rgba(0, 0, 0, .18)';
+      list.style.transition = '.5s'
+      
 
       for( i=0; i< list.children.length; i++) {
         list.children[i].style.listStyle ='none';
@@ -74,9 +91,13 @@
         if(value === '0'){
           value = '1';
           list.style.opacity = value;
+          list.style.marginLeft = '0'
+          
         } else {
           value = '0';
           list.style.opacity = value;
+          list.style.marginLeft = '8vw'
+          
         }
       });
     </script>
