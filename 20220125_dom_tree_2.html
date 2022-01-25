@@ -7,26 +7,27 @@
   <title>Document</title>
 </head>
 <body>
-  <button>click</button>
+  <button id="btn">click</button>
 
   <script>
-    const button = document.querySelector('button');
-    console.log(button);
-    console.dir(button.parentElement);
-    console.dir(button);
-    // let value = button.parentElement.style.backgroundColor;
-    // value = 'gray';
-    // console.log(value);
-    button.parentElement.style.backgroundColor = '#eee'
+    const btn = document.querySelector('#btn');
+    console.log(btn);
+    console.dir(btn.parentElement);
+    console.dir(btn);
+    
+    let value = '#eee';
+    btn.parentElement.style.backgroundColor = value;
 
-    button.addEventListener('click', function() {
+    btn.addEventListener('click', function() {
       
-      if(button.parentElement.style.backgroundColor === 'skyblue') {
-        button.parentElement.style.backgroundColor = 'gray';
-        button.textContent = 'dirty sky';
+      if(value === 'skyblue') {
+        value = 'gray';
+        btn.parentElement.style.backgroundColor = value;
+        btn.textContent = 'dirty sky';
       } else {
-        button.parentElement.style.backgroundColor = 'skyblue';
-        button.textContent = 'clean sky';
+        value = 'skyblue';
+        btn.parentElement.style.backgroundColor = value;
+        btn.textContent = 'clean sky';
       }
     });
   </script>
